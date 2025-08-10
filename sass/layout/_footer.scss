@@ -1,0 +1,142 @@
+@use "../utils/variables" as var;
+footer {
+  padding: 96px 0 92px;
+  background-color: var.$bg-blueTint;
+  .menu-text {
+    display: flex;
+    flex-direction: column;
+    .menu-text1 {
+      display: flex;
+      gap: 250px;
+      .brand-logo {
+        .brand-logo__text {
+          margin: 23.59px 0 86px 0;
+          p {
+            width: 399px;
+            height: 56;
+            opacity: 0.8;
+            top: 160px;
+            left: 160px;
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0%;
+            color: var.$text-whiteHover;
+          }
+        }
+      }
+      .brand-text {
+        h2 {
+          font-family: Poppins;
+          font-weight: 600;
+          font-size: 48px;
+          line-height: 64px;
+          letter-spacing: 0%;
+          color: var.$text-whiteHover;
+        }
+        p {
+          font-family: Poppins;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 28px;
+          letter-spacing: 0%;
+          width: 399px;
+          height: 84;
+          opacity: 0.8;
+          top: 174px;
+          left: 819px;
+          color: var.$text-whiteHover;
+        }
+        img {
+          margin-top: 28px;
+        }
+      }
+    }
+    .button {
+      .button-btn {
+        width: 517px;
+        padding: 17px 137px 12px 37px;
+        // height: 95px;
+        display: flex;
+        gap: 30px;
+        border: none;
+        background-color: var.$bg-yellow;
+        .link {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 1px;
+          & p:nth-child(1) {
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 18px;
+            // line-height: 32px;
+            letter-spacing: 0%;
+            color: var.$text-darkblue;
+          }
+          & p:nth-child(2) {
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0%;
+            color: var.$text-darkblue;
+            width: 181;
+            // height: 28;
+            opacity: 0.8;
+            // top: 353px;
+            // left: 197px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1070px) {
+    & {
+      .menu-text {
+        text-align: center;
+        align-items: center;
+        .menu-text1 {
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+          .brand-logo {
+            // width: 100%;
+            .brand-logo__text {
+              p {
+                width: 100%;
+              }
+            }
+          }
+          .brand-text {
+            h2 {
+              width: 100%;
+            }
+            p {
+              width: 100%;
+            }
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 530px) {
+    & {
+      .menu-text {
+        .button {
+          width: 300px;
+          justify-content: center;
+          .button-btn {
+            padding: 17px 37px 12px 37px;
+            flex-direction: column;
+            gap: 0px;
+            align-items: center;
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}

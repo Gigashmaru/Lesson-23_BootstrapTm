@@ -1,0 +1,77 @@
+@use "./flex";
+@use "../utils/variables" as var;
+header {
+  background-color: var.$bg-blueTint;
+  nav {
+    @include flex.flx;
+    .nav-brand {
+      #hamburger {
+        display: none;
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 40px;
+      margin: 16px;
+      li {
+        .nav-menu__link {
+          font-family: Poppins;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 28px;
+          letter-spacing: 0%;
+          transition: 0.5s;
+          color: var.$text-gray;
+          &:hover {
+            color: var.$text-whiteHover;
+          }
+        }
+        .nav-menu__border {
+          font-family: Poppins;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 28px;
+          letter-spacing: 0%;
+          padding: 16px 48px;
+          border-radius: 41px;
+          border: 3px solid var.$border-color;
+          color: var.$text-whiteHover;
+          transition: 0.5s;
+          &:hover {
+            background-color: var.$text-whiteHover;
+            color: var.$text-darkblue;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 950px) {
+    & {
+      nav {
+        padding: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .nav-brand {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          #hamburger {
+            display: flex;
+            color: white;
+            align-items: center;
+          }
+        }
+        .nav-menu {
+          display: none;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        .active {
+          display: flex;
+        }
+      }
+    }
+  }
+}

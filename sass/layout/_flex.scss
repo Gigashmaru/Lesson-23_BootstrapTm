@@ -1,0 +1,7 @@
+@mixin flx($just:space-between, $gap: 0) {
+  display: flex;
+  justify-content: $just;
+  align-items: center;
+  gap: $gap;
+  padding: 20px 0;
+}
